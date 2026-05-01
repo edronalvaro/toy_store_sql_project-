@@ -45,8 +45,6 @@ GROUP BY product_name
 ORDER BY profit_margin DESC
 LIMIT 5;
 
-This query identifies the most profitable products based on margin rather than revenue, helping prioritize high-value inventory decisions.
-
 WITH monthly_revenue AS (
     SELECT 
         DATE_FORMAT(sale_date, '%Y-%m') AS month,
@@ -63,8 +61,3 @@ SELECT
         / LAG(total_revenue) OVER (ORDER BY month) * 100, 2
     ) AS mom_growth_pct
 FROM monthly_revenue;
-
-This query highlights month-over-month revenue trends and captures seasonality patterns in sales performance.
-
-## Why These Queries Matter
-These queries demonstrate both profitability analysis and time-series analysis using window functions.
