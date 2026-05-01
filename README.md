@@ -32,9 +32,9 @@ A SQL data analysis project that explores sales performance, profitability, and 
 
 This analysis helps identify revenue opportunities, reduce stock inefficiencies, and improve profit margins through data-driven decisions.
 
-## Sample SQL Query
+## Sample SQL Queries
 
-### Top Products by Profit Margin
+## Query 1: Top Products by Profit Margin
 
 ```sql
 SELECT 
@@ -45,9 +45,8 @@ GROUP BY product_name
 ORDER BY profit_margin DESC
 LIMIT 5;
 
-#### Monthly Revenue Trend 
+This query identifies the most profitable products based on margin rather than revenue, helping prioritize high-value inventory decisions.
 
-```sql
 WITH monthly_revenue AS (
     SELECT 
         DATE_FORMAT(sale_date, '%Y-%m') AS month,
@@ -64,6 +63,8 @@ SELECT
         / LAG(total_revenue) OVER (ORDER BY month) * 100, 2
     ) AS mom_growth_pct
 FROM monthly_revenue;
-Insight:
 
-This shows monthly revenue growth trends a
+This query highlights month-over-month revenue trends and captures seasonality patterns in sales performance.
+
+## Why These Queries Matter
+These queries demonstrate both profitability analysis and time-series analysis using window functions.
