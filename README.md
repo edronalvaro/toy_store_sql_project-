@@ -2,82 +2,89 @@
 
 ---
 
-## Overview
-This SQL project analyzes sales performance, profitability, and inventory efficiency for a multi-store toy retailer.  
+## Executive Summary
+This project analyzes sales performance, profitability, and inventory efficiency for a multi-store toy retailer using SQL.
 
-The goal is to identify revenue drivers, optimize inventory allocation, and uncover operational inefficiencies that impact profitability.
+The objective is to identify key revenue drivers, evaluate product and store performance, and uncover operational inefficiencies affecting profitability and inventory management.
+
+The analysis reveals a profitable business with strong seasonal demand patterns, but also highlights inefficiencies in inventory allocation and uneven product contribution to revenue and profit.
 
 ---
 
-## Business Objective
-The business is profitable but faces key operational challenges:
+## Business Problem
+Although the business is profitable, several operational challenges exist:
 
-- Uneven product profitability across categories  
-- Inventory inefficiencies (stockouts and overstock)  
-- Revenue concentration in a small number of products and stores  
-- Seasonal demand fluctuations impacting planning  
+- Uneven profitability across product categories and SKUs  
+- Inventory misalignment leading to stockouts and overstock situations  
+- Revenue concentration in a limited number of products and stores  
+- Seasonal fluctuations impacting demand forecasting and planning  
 
-The objective of this analysis is to provide data-driven insights to improve profitability and operational efficiency.
+This analysis aims to provide data-driven recommendations to improve profitability and operational efficiency.
 
 ---
 
 ## Key Business Questions
-- Which products generate the most revenue and profit?
-- How does performance vary across product categories?
-- Which stores contribute the most to overall revenue?
-- Where are inventory inefficiencies occurring?
-- How does revenue change over time (seasonality & trends)?
+- Which products generate the highest revenue and profit?
+- How does profitability vary across product categories?
+- Which stores contribute the most to overall performance?
+- Where do inventory inefficiencies exist?
+- What seasonal patterns exist in sales performance?
 
 ---
 
-## Data Preparation & Cleaning
-- Removed currency symbols from price and cost fields  
-- Converted data types for accurate financial calculations  
-- Checked for duplicates and invalid records  
-- Handled missing values using COALESCE  
-- Created a centralized analytics table (`master_sales`) for reporting  
+## Data Preparation & Engineering
+
+The analysis was built on a structured SQL transformation process:
+
+- Removed currency symbols from product pricing fields in the products table  
+- Converted price and cost fields into numeric data types for accurate calculations  
+- Identified duplicate records in sales data using aggregation checks  
+- Handled missing values within calculated fields using COALESCE  
+- Built a centralized analytics table (`master_sales`) to consolidate sales, product, and store data for analysis  
+
+This transformation layer enabled efficient querying and consistent metric calculations.
 
 ---
 
-## Key Analysis Performed
+## Analytical Approach
 
 ### 1. Product Performance Analysis
-- Identified top and bottom performing products by revenue and profit  
+- Measured total revenue and profit by product  
 - Calculated profit margins across products and categories  
-- Ranked products within each category using window functions  
+- Ranked products using window functions  
 
-**Insight:**  
-High revenue products are not always the most profitable. Some lower revenue products generate significantly higher margins.
+**Key Insight:**  
+High revenue products are not always the most profitable, indicating a need to balance volume and margin-driven strategy.
 
 ---
 
-### 2. Inventory Analysis
+### 2. Inventory Efficiency Analysis
 - Identified low-stock high-demand products  
 - Measured sell-through rates across SKUs  
-- Compared inventory levels against actual sales  
+- Compared inventory levels against actual sales demand  
 
-**Insight:**  
-Stockouts in high-performing products are causing missed revenue opportunities, while low-demand products are overstocked.
+**Key Insight:**  
+Stockouts in high-demand products result in lost revenue opportunities, while some slow-moving products indicate excess inventory holding.
 
 ---
 
 ### 3. Store Performance Analysis
-- Ranked stores by revenue contribution  
-- Analyzed profit margins by store location  
-- Identified top-performing and underperforming stores  
+- Evaluated revenue contribution by store  
+- Analyzed profit margins across locations  
+- Ranked store performance over time  
 
-**Insight:**  
-Large urban stores drive most revenue, while smaller stores often show higher efficiency in profit margin.
+**Key Insight:**  
+Large urban stores drive the majority of revenue, while smaller stores often demonstrate higher efficiency in profit margins.
 
 ---
 
 ### 4. Time-Series Analysis
 - Monthly revenue trend analysis  
-- MoM growth calculation using LAG window function  
-- Seasonal pattern detection  
+- Month-over-month growth using LAG window function  
+- Seasonal pattern identification  
 
-**Insight:**  
-Sales show strong seasonality with peaks in Q4 and declines in January, followed by gradual recovery.
+**Key Insight:**  
+Sales demonstrate strong seasonality, with peaks in Q4 and declines in January, followed by gradual recovery.
 
 ---
 
