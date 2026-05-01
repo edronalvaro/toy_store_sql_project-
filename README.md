@@ -41,6 +41,8 @@ FROM master_sales
 GROUP BY product_name
 ORDER BY profit_margin DESC
 LIMIT 5;
+
+This query identifies the most profitable products based on margin rather than revenue, helping prioritize high-value inventory decisions.
 ```
 
 ## Month-over-Month Revenue Growth
@@ -61,4 +63,7 @@ SELECT
         / LAG(total_revenue) OVER (ORDER BY month) * 100, 2
     ) AS mom_growth_pct
 FROM monthly_revenue;
+
+This query highlights month-over-month revenue trends and captures seasonality patterns in sales performance.
 ```
+These queries demonstrate both profitability analysis and time-series analysis using window functions.
