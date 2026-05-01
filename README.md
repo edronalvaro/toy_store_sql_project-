@@ -1,8 +1,8 @@
-# 🧸 Toy Store Sales & Inventory Analysis (SQL Project)
+# Toy Store Sales & Inventory Analysis (SQL Project)
 
 A SQL data analysis project that explores sales performance, profitability, and inventory efficiency for a multi-store toy retailer. The goal is to uncover revenue drivers, optimize stock levels, and improve operational decision-making.
 
-## 🔍 Key Highlights
+## Key Highlights
 
 - Built a centralized analytics table using SQL (master_sales)
 - Analyzed $ multi-million revenue dataset across stores and products
@@ -11,15 +11,15 @@ A SQL data analysis project that explores sales performance, profitability, and 
 - Performed time-series analysis (monthly & seasonal trends)
 - Used window functions (RANK, LAG) for advanced insights
 
-- ## 📌 Business Impact
+- ## Business Impact
 
 This analysis helps identify revenue opportunities, reduce stock inefficiencies, and improve profit margins through data-driven inventory and product decisions.
 
-# 🧸 Toy Store Sales & Inventory Analysis (SQL Project)
+# Toy Store Sales & Inventory Analysis (SQL Project)
 
 A SQL data analysis project that explores sales performance, profitability, and inventory efficiency for a multi-store toy retailer. The goal is to uncover revenue drivers, optimize stock levels, and improve operational decision-making.
 
-## 🔍 Key Highlights
+## Key Highlights
 
 - Built a centralized analytics table using SQL (master_sales)
 - Analyzed multi-million dollar revenue dataset across stores and products
@@ -28,11 +28,11 @@ A SQL data analysis project that explores sales performance, profitability, and 
 - Performed time-series analysis (monthly & seasonal trends)
 - Used window functions (RANK, LAG) for advanced insights
 
-## 📌 Business Impact
+## Business Impact
 
 This analysis helps identify revenue opportunities, reduce stock inefficiencies, and improve profit margins through data-driven decisions.
 
-## 🧪 Sample SQL Query
+## Sample SQL Query
 
 ### Top Products by Profit Margin
 
@@ -45,7 +45,7 @@ GROUP BY product_name
 ORDER BY profit_margin DESC
 LIMIT 5;
 
-### Monthly Revenue Trend 
+#### Monthly Revenue Trend 
 
 ```sql
 WITH monthly_revenue AS (
