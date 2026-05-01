@@ -86,6 +86,18 @@ Large urban stores drive the majority of revenue, while smaller stores often dem
 **Key Insight:**  
 Sales demonstrate strong seasonality, with peaks in Q4 and declines in January, followed by gradual recovery.
 
+## Business Recommendations
+
+Based on the analysis findings:
+
+- Improve inventory replenishment for high-demand products to reduce stockouts and prevent lost sales  
+- Reduce excess inventory for consistently low-performing products to improve capital efficiency  
+- Prioritize high-margin product categories to improve overall profitability mix  
+- Optimize stock allocation across stores based on demand and regional performance patterns  
+- Improve forecasting models to better handle seasonal spikes in Q4 and post-holiday slowdowns
+
+- ****(com back to add specifics)****
+
 ---
 
 ## Top 5 Products by Profit Margin
